@@ -2,9 +2,10 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import MainMenu from './components/MainMenu';
 import PokerRoom from './components/PokerRoom';
+require('dotenv').config()
 import './App.css';
 
-const WS_URL = 'ws://localhost:8080';
+const WS_URL = process.env.server || 'ws://localhost:8080'
 
 function App() {
   return (
